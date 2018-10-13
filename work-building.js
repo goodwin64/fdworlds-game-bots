@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FDWorlds work bot
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  try to take over the world!
 // @author       You
 // @include      http://www.fdworlds.net/*
@@ -67,8 +67,8 @@
     }
 
     function hideBuildingImg(doc) {
-        var imgElem = doc.querySelector('img[src*="/img/locations/nd/jpg/satellite_street/summer/stroyka"]');
-        imgElem.hidden = true;
+        var imgElem = doc.querySelector('img[src*="/img/locations/nd/"][src*="stroyka"]');
+        imgElem && (imgElem.hidden = true);
     }
 
     function startWork(doc) {
